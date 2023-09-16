@@ -12,6 +12,12 @@ services:
         value: ~16.13.0
       - key: NODE_ENV
         value: production
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
       - key: CLOUDINARY_NAME
         sync: false
       - key: CLOUDINARY_KEY
@@ -31,14 +37,8 @@ services:
       - key: DATABASE_SHEMA
         value: public
       - key: DATABASE_POOL_MIN
-        value: 2
+        value: 1
       - key: DATABASE_POOL_MAX
-        value: 5
+        value: 4
       - key: JWT_SECRET
-        generateValue: true
-      - key: ADMIN_JWT_SECRET
-        generateValue: true
-      - key: APP_KEYS
-        generateValue: true
-      - key: API_TOKEN_SALT
         generateValue: true
