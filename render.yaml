@@ -18,10 +18,22 @@ services:
         sync: false
       - key: CLOUDINARY_SECRET
         sync: false
+      - key: CLOUDINARY_FOLDER
+        sync: false
+      - key: DATABASE_CLIENT
+        value: postgres
       - key: DATABASE_URL
-        fromDatabase:
-          name: strapi
-          property: connectionString
+        sync: false
+      - key: DATABASE_SSL
+        value: false
+      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+        value: false
+      - key: DATABASE_SHEMA
+        value: public
+      - key: DATABASE_MAX_POOL_SIZE
+        value: 5
+      - key: DATABASE_MIN_POOL_SIZE
+        value: 2
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
