@@ -32,8 +32,8 @@ services:
         value: public
       - key: DATABASE_POOL_MIN
         value: 2
-      - key: DATABASE_POOL_MAX=5
-        value: 2
+      - key: DATABASE_POOL_MAX
+        value: 5
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
